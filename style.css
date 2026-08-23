@@ -20,12 +20,13 @@ body {
     background: transparent;
 }
 /* Susunan tumpukan halaman */
-#page1 { z-index: 6; transition: opacity 0.6s ease, visibility 0.6s; }
-#page2 { z-index: 5; perspective: 1200px; }
-#page3 { z-index: 4; perspective: 1200px; }
-#page4 { z-index: 3; perspective: 1200px; }
-#page5 { z-index: 2; perspective: 1200px; }
-#page6 { z-index: 1; }
+#page1 { z-index: 7; transition: opacity 0.6s ease, visibility 0.6s; }
+#page2 { z-index: 6; perspective: 1200px; }
+#page3 { z-index: 5; perspective: 1200px; }
+#page4 { z-index: 4; perspective: 1200px; }
+#page5 { z-index: 3; perspective: 1200px; }
+#page6 { z-index: 2; perspective: 1200px; }
+#page7 { z-index: 1; }
 
 /* Transisi Hal 1 Fade Out */
 #page1.hidden { opacity: 0; visibility: hidden; }
@@ -74,12 +75,11 @@ body {
 .grey-tape { top: 10%; right: 15%; background: #7f8c8d; transform: rotate(-10deg); width: 60px; height: 20px; }
 .sparkles-right { top: 25%; right: 10%; font-size: 1.5rem; }
 
-/* Desain Halaman 5 (Pesan Terakhir) */
+/* Desain Halaman 5 (Pesan Singkat) */
 .star-yellow { top: 20%; left: 15%; font-size: 1.8rem; }
 .tulip-pink { top: 15%; right: 15%; font-size: 1.8rem; }
 .heart-yellow { bottom: 10%; left: 15%; font-size: 1.8rem; }
 .message-text { font-size: 1.6rem; padding: 0 1.5rem; line-height: 1.5; margin-top: -10px; }
-
 .torn-top { border-top-left-radius: 0; border-top-right-radius: 0; }
 .torn-top::before { content: ""; position: absolute; top: -8px; left: 0; width: 100%; height: 8px; background: linear-gradient(135deg, #f9f5e9 50%, transparent 50%) top left / 15px 8px, linear-gradient(225deg, #f9f5e9 50%, transparent 50%) top left / 15px 8px; background-repeat: repeat-x; }
 
@@ -95,6 +95,10 @@ body {
 .pol-3 { bottom: 15%; left: 6%; transform: rotate(-4deg); }
 .pol-4 { bottom: 10%; right: 6%; transform: rotate(5deg); }
 
+/* Desain Halaman 7 (Pesan Panjang) */
+.hibiscus-pink { top: 12%; right: 10%; font-size: 2.5rem; }
+.message-text-long { font-size: 1.4rem; padding: 0 1.2rem; line-height: 1.6; margin-top: 15px; }
+
 /* Animasi Buka Kertas */
 .flip-paper {
     transform-origin: left center;
@@ -105,7 +109,8 @@ body {
 .page-2.flipped .flip-paper,
 .page-3.flipped .flip-paper,
 .page-4.flipped .flip-paper,
-.page-5.flipped .flip-paper {
+.page-5.flipped .flip-paper,
+.page-6.flipped .flip-paper {
     transform: rotateY(-180deg);
 }
 
