@@ -7,9 +7,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const page5 = document.getElementById('page5');
     const page6 = document.getElementById('page6');
     const page7 = document.getElementById('page7');
-    let t1, t2, t3, t4, t5;
+    const page8 = document.getElementById('page8');
+    let t1, t2, t3, t4, t5, t6;
 
-    // Buka Halaman
+    // Buka Halaman berurutan
     btnOpen.addEventListener('click', () => {
         page1.classList.add('hidden');
         
@@ -18,20 +19,24 @@ document.addEventListener('DOMContentLoaded', () => {
         t3 = setTimeout(() => { page4.classList.add('flipped'); }, 11000);
         t4 = setTimeout(() => { page5.classList.add('flipped'); }, 15000);
         t5 = setTimeout(() => { page6.classList.add('flipped'); }, 19000);
+        t6 = setTimeout(() => { page7.classList.add('flipped'); }, 23000);
     });
 
-    // Reset di halaman terakhir (7)
-    page7.addEventListener('click', () => {
+    // Reset di halaman terakhir (8)
+    page8.addEventListener('click', () => {
         page1.classList.remove('hidden');
         page2.classList.remove('flipped');
         page3.classList.remove('flipped');
         page4.classList.remove('flipped');
         page5.classList.remove('flipped');
         page6.classList.remove('flipped');
+        page7.classList.remove('flipped');
+        
         clearTimeout(t1);
         clearTimeout(t2);
         clearTimeout(t3);
         clearTimeout(t4);
         clearTimeout(t5);
+        clearTimeout(t6);
     });
 });

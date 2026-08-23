@@ -20,13 +20,14 @@ body {
     background: transparent;
 }
 /* Susunan tumpukan halaman */
-#page1 { z-index: 7; transition: opacity 0.6s ease, visibility 0.6s; }
-#page2 { z-index: 6; perspective: 1200px; }
-#page3 { z-index: 5; perspective: 1200px; }
-#page4 { z-index: 4; perspective: 1200px; }
-#page5 { z-index: 3; perspective: 1200px; }
-#page6 { z-index: 2; perspective: 1200px; }
-#page7 { z-index: 1; }
+#page1 { z-index: 8; transition: opacity 0.6s ease, visibility 0.6s; }
+#page2 { z-index: 7; perspective: 1200px; }
+#page3 { z-index: 6; perspective: 1200px; }
+#page4 { z-index: 5; perspective: 1200px; }
+#page5 { z-index: 4; perspective: 1200px; }
+#page6 { z-index: 3; perspective: 1200px; }
+#page7 { z-index: 2; perspective: 1200px; }
+#page8 { z-index: 1; }
 
 /* Transisi Hal 1 Fade Out */
 #page1.hidden { opacity: 0; visibility: hidden; }
@@ -99,6 +100,17 @@ body {
 .hibiscus-pink { top: 12%; right: 10%; font-size: 2.5rem; }
 .message-text-long { font-size: 1.4rem; padding: 0 1.2rem; line-height: 1.6; margin-top: 15px; }
 
+/* Desain Halaman 8 (Harapan) */
+.pink-tape { top: 8%; left: 15%; background: rgba(220, 150, 160, 0.85); transform: rotate(-6deg); width: 65px; height: 22px; }
+.flower-yellow-tr { top: 15%; right: 15%; font-size: 2rem; }
+.sparkles-ml { top: 55%; left: 10%; font-size: 1.5rem; }
+.butterfly-bl { bottom: 5%; left: 15%; font-size: 1.5rem; transform: rotate(-15deg); }
+.wishes-container { text-align: center; width: 100%; padding: 0 1.5rem; margin-top: -20px; }
+.wishes-title { font-family: 'Kalam', cursive; font-size: 2.2rem; color: #b33951; margin-bottom: 1.2rem; text-shadow: 1px 1px 2px rgba(0,0,0,0.1); }
+.wishes-list { list-style: none; text-align: left; display: inline-block; }
+.wishes-list li { font-family: 'Caveat', cursive; font-size: 1.6rem; color: #333; margin-bottom: 0.8rem; display: flex; align-items: center; gap: 8px; }
+.bullet { font-size: 1.1rem; }
+
 /* Animasi Buka Kertas */
 .flip-paper {
     transform-origin: left center;
@@ -110,7 +122,8 @@ body {
 .page-3.flipped .flip-paper,
 .page-4.flipped .flip-paper,
 .page-5.flipped .flip-paper,
-.page-6.flipped .flip-paper {
+.page-6.flipped .flip-paper,
+.page-7.flipped .flip-paper {
     transform: rotateY(-180deg);
 }
 
