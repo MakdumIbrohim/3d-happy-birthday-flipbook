@@ -20,11 +20,12 @@ body {
     background: transparent;
 }
 /* Susunan tumpukan halaman */
-#page1 { z-index: 5; transition: opacity 0.6s ease, visibility 0.6s; }
-#page2 { z-index: 4; perspective: 1200px; }
-#page3 { z-index: 3; perspective: 1200px; }
-#page4 { z-index: 2; perspective: 1200px; }
-#page5 { z-index: 1; }
+#page1 { z-index: 6; transition: opacity 0.6s ease, visibility 0.6s; }
+#page2 { z-index: 5; perspective: 1200px; }
+#page3 { z-index: 4; perspective: 1200px; }
+#page4 { z-index: 3; perspective: 1200px; }
+#page5 { z-index: 2; perspective: 1200px; }
+#page6 { z-index: 1; }
 
 /* Transisi Hal 1 Fade Out */
 #page1.hidden { opacity: 0; visibility: hidden; }
@@ -79,9 +80,20 @@ body {
 .heart-yellow { bottom: 10%; left: 15%; font-size: 1.8rem; }
 .message-text { font-size: 1.6rem; padding: 0 1.5rem; line-height: 1.5; margin-top: -10px; }
 
-/* Kertas Robek Atas */
 .torn-top { border-top-left-radius: 0; border-top-right-radius: 0; }
 .torn-top::before { content: ""; position: absolute; top: -8px; left: 0; width: 100%; height: 8px; background: linear-gradient(135deg, #f9f5e9 50%, transparent 50%) top left / 15px 8px, linear-gradient(225deg, #f9f5e9 50%, transparent 50%) top left / 15px 8px; background-repeat: repeat-x; }
+
+/* Desain Halaman 6 (Grid Polaroid Mini) */
+.bow-red { top: 2%; left: 50%; transform: translateX(-50%); font-size: 2rem; }
+.leaf-green { top: 45%; left: 3%; font-size: 1.8rem; }
+.butterfly { top: 48%; right: 3%; font-size: 1.8rem; transform: rotate(15deg); }
+.polaroid-mini { background-color: white; padding: 6px 6px 18px 6px; box-shadow: 2px 3px 8px rgba(0,0,0,0.2); position: absolute; width: 40%; max-width: 130px; }
+.img-placeholder-mini { width: 100%; aspect-ratio: 1/1; background-color: #ddd; display: flex; align-items: center; justify-content: center; overflow: hidden; color: #888; font-size: 0.8rem; text-align: center; }
+.img-placeholder-mini img { width: 100%; height: 100%; object-fit: cover; }
+.pol-1 { top: 12%; left: 6%; transform: rotate(-5deg); }
+.pol-2 { top: 16%; right: 6%; transform: rotate(6deg); }
+.pol-3 { bottom: 15%; left: 6%; transform: rotate(-4deg); }
+.pol-4 { bottom: 10%; right: 6%; transform: rotate(5deg); }
 
 /* Animasi Buka Kertas */
 .flip-paper {
@@ -92,7 +104,8 @@ body {
 }
 .page-2.flipped .flip-paper,
 .page-3.flipped .flip-paper,
-.page-4.flipped .flip-paper {
+.page-4.flipped .flip-paper,
+.page-5.flipped .flip-paper {
     transform: rotateY(-180deg);
 }
 
