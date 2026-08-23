@@ -9,10 +9,58 @@
 </head>
 <body>
     <div class="app-container">
-        <div class="book-wrapper">
+        <div class="book">
             
-            <!-- Halaman 1 -->
-            <div class="page page-1">
+            <!-- Halaman 3 (Kertas paling bawah) -->
+            <div class="page page-3" id="page3">
+                <div class="paper-full">
+                    <div class="word">
+                        <span class="letter c-yellow tilt-l">H</span>
+                        <span class="letter c-white tilt-r">A</span>
+                        <span class="letter c-blue tilt-l">P</span>
+                        <span class="letter c-dark tilt-r">P</span>
+                        <span class="letter c-pink tilt-l">Y</span>
+                    </div>
+                    <div class="word mt-2">
+                        <span class="letter c-white tilt-r">B</span>
+                        <span class="letter c-pink tilt-l">I</span>
+                        <span class="letter c-yellow tilt-r">R</span>
+                        <span class="letter c-dark tilt-l">T</span>
+                        <span class="letter c-blue tilt-r">H</span>
+                        <span class="letter c-white tilt-l">D</span>
+                        <span class="letter c-yellow tilt-r">A</span>
+                        <span class="letter c-pink tilt-l">Y</span>
+                    </div>
+                    <div class="word mt-4">
+                        <span class="letter c-blue tilt-l">F</span>
+                        <span class="letter c-white tilt-r">I</span>
+                        <span class="letter c-pink tilt-l">T</span>
+                        <span class="letter c-yellow tilt-r">R</span>
+                        <span class="letter c-dark tilt-l">I</span>
+                    </div>
+                    <div class="word mt-2">
+                        <span class="letter c-white tilt-r">A</span>
+                        <span class="letter c-pink tilt-l">U</span>
+                        <span class="letter c-blue tilt-r">L</span>
+                        <span class="letter c-yellow tilt-l">I</span>
+                        <span class="letter c-white tilt-r">A</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Halaman 2 (Kertas yang bisa dilipat/dibuka) -->
+            <div class="page page-2" id="page2">
+                <div class="paper-full flip-paper">
+                    <div class="tape tape-center"></div>
+                    <div class="deco blossom">🌸</div>
+                    <div class="deco sparkles">✨</div>
+                    <div class="blue-scrap"></div>
+                    <p class="paper-text">sedang menyusun sesuatu untukmu<span class="dots"></span></p>
+                </div>
+            </div>
+
+            <!-- Halaman 1 (Cover UI) -->
+            <div class="page page-1" id="page1">
                 <div class="deco camera">📷</div>
                 <div class="deco flower">🌼</div>
                 <div class="deco ticket">🎫</div>
@@ -40,18 +88,6 @@
 
                 <p class="subtitle">Aku punya sesuatu buat kamu...</p>
                 <button class="btn-open">Buka Scrapbook</button>
-            </div>
-
-            <!-- Halaman 2 -->
-            <div class="page page-2">
-                <div class="paper-full">
-                    <div class="tape tape-center"></div>
-                    <div class="deco blossom">🌸</div>
-                    <div class="deco sparkles">✨</div>
-                    <div class="blue-scrap"></div>
-                    
-                    <p class="paper-text">sedang menyusun sesuatu untukmu...</p>
-                </div>
             </div>
 
         </div>

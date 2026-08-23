@@ -1,15 +1,24 @@
 document.addEventListener('DOMContentLoaded', () => {
     const btnOpen = document.querySelector('.btn-open');
-    const bookWrapper = document.querySelector('.book-wrapper');
-    const paperFull = document.querySelector('.paper-full');
+    const page1 = document.getElementById('page1');
+    const page2 = document.getElementById('page2');
+    const page3 = document.getElementById('page3');
+    let timeoutId;
 
-    // Buka buku (Flip ke Halaman 2)
+    // Buka Halaman 1 -> 2 (Hal 1 cukup memudar/hilang)
     btnOpen.addEventListener('click', () => {
-        bookWrapper.classList.add('flipped');
+        page1.classList.add('hidden');
+        
+        // Setelah animasi fade out (0.6s) dan waktu baca (3s) -> flip kertas Halaman 2
+        timeoutId = setTimeout(() => {
+            page2.classList.add('flipped');
+        }, 3000);
     });
 
-    // Tutup buku kembali (Flip ke Halaman 1 jika area kertas diklik)
-    paperFull.addEventListener('click', () => {
-        bookWrapper.classList.remove('flipped');
+    // Reset jika halaman 3 diklik (tutup kembali)
+    page3.addEventListener('click', () => {
+        page1.classList.remove('hidden');
+        page2.classList.remove('flipped');
+        clearTimeout(timeoutId);
     });
 });
