@@ -11,9 +11,28 @@
     <div class="app-container">
         <div class="book">
             
-            <!-- Halaman 3 (Kertas paling bawah) -->
-            <div class="page page-3" id="page3">
+            <!-- Halaman 4 (Kertas Foto Polaroid, Paling bawah) -->
+            <div class="page page-4" id="page4">
                 <div class="paper-full">
+                    <div class="deco blossom-pink">🌸</div>
+                    <div class="tape grey-tape"></div>
+                    <div class="deco sparkles-right">✨</div>
+
+                    <div class="polaroid">
+                        <div class="tape tape-polaroid"></div>
+                        <!-- TEMPLATE FOTO: Ganti src dengan letak foto Anda -->
+                        <div class="img-placeholder">
+                            <img src="images/foto1.jpg" alt="Foto Pasangan" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                            <span class="img-fallback">Taruh foto di<br>images/foto1.jpg</span>
+                        </div>
+                        <p class="polaroid-text">Foto favoritku ❤️</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Halaman 3 (Kertas huruf tempel yang bisa dilipat) -->
+            <div class="page page-3" id="page3">
+                <div class="paper-full flip-paper">
                     <div class="word">
                         <span class="letter c-yellow tilt-l">H</span>
                         <span class="letter c-white tilt-r">A</span>
@@ -48,7 +67,7 @@
                 </div>
             </div>
 
-            <!-- Halaman 2 (Kertas yang bisa dilipat/dibuka) -->
+            <!-- Halaman 2 (Kertas yang bisa dilipat pertama) -->
             <div class="page page-2" id="page2">
                 <div class="paper-full flip-paper">
                     <div class="tape tape-center"></div>
