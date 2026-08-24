@@ -566,6 +566,20 @@ body {
     transform: rotate(15deg);
 }
 
+.center-date {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Kalam', cursive;
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #a82e5b;
+    text-align: center;
+    text-shadow: 1px 1px 3px rgba(255,255,255,0.9);
+    z-index: 10;
+}
+
 .polaroid-mini {
     background-color: white;
     padding: 6px 6px 18px 6px;
