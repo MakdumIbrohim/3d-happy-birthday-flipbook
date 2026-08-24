@@ -1,4 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const musicOverlay = document.getElementById('music-overlay');
+    const btnPlayMusic = document.getElementById('btn-play-music');
+    const bgMusic = document.getElementById('bg-music');
     const btnOpen = document.querySelector('.btn-open');
     const giftBox = document.getElementById('giftBox');
     const finalCard = document.getElementById('finalCard');
@@ -58,6 +61,13 @@ document.addEventListener('DOMContentLoaded', () => {
     // Event Panah Visual
     navLeft.addEventListener('click', flipPrev);
     navRight.addEventListener('click', flipNext);
+
+    // Event Mulai Musik
+    btnPlayMusic.addEventListener('click', () => {
+        bgMusic.play();
+        musicOverlay.classList.add('hidden');
+        book.classList.add('show-book');
+    });
 
     // Buka cover
     btnOpen.addEventListener('click', () => {
