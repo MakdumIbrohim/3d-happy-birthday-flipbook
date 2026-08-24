@@ -22,14 +22,15 @@ document.addEventListener('DOMContentLoaded', () => {
             if (currentIndex < flipPages.length) navRight.classList.add('show');
             else navRight.classList.remove('show');
             
-            // Tampilkan panah kiri dan geser buku ke tengah jika halaman sudah ada yang dibalik
+            // Tampilkan panah kiri jika halaman kertas dalam (di luar sampul) sudah ada yang dibalik
             if (currentIndex > 0) {
                 navLeft.classList.add('show');
-                book.classList.add('open-book');
             } else {
                 navLeft.classList.remove('show');
-                book.classList.remove('open-book');
             }
+            
+            // Karena sampul (page1) sudah terbuka, buku otomatis menjadi format buku terbuka (center)
+            book.classList.add('open-book');
         } else {
             // Sembunyikan semuanya saat cover tertutup atau foto akhir terbuka
             navLeft.classList.remove('show');
