@@ -148,7 +148,13 @@ body {
 .c-red { background-color: #c93a4b; color: white; }
 .tilt-l { transform: rotate(-6deg); }
 .tilt-r { transform: rotate(5deg); }
-.subtitle { font-family: 'Caveat', cursive; font-size: 1.8rem; color: #fcebd7; margin-bottom: 2rem; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); z-index: 5; }
+.subtitle {
+    font-family: 'Caveat', cursive;
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 2rem;
+    z-index: 5;
+}
 .btn-open { background-color: #a82e5b; color: white; border: none; padding: 12px 30px; font-size: 1.1rem; font-weight: bold; border-radius: 25px; cursor: pointer; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); transition: transform 0.2s, background-color 0.2s; z-index: 5; }
 .btn-open:hover { background-color: #92254e; transform: scale(1.05); }
 .btn-open:active { transform: scale(0.95); }
@@ -175,8 +181,7 @@ body {
 .tulip-pink { top: 15%; right: 15%; font-size: 1.8rem; }
 .heart-yellow { bottom: 10%; left: 15%; font-size: 1.8rem; }
 .message-text { font-size: 1.6rem; padding: 0 1.5rem; line-height: 1.5; margin-top: -10px; }
-.torn-top { border-top-left-radius: 0; border-top-right-radius: 0; }
-.torn-top::before { content: ""; position: absolute; top: -8px; left: 0; width: 100%; height: 8px; background: linear-gradient(135deg, #f9f5e9 50%, transparent 50%) top left / 15px 8px, linear-gradient(225deg, #f9f5e9 50%, transparent 50%) top left / 15px 8px; background-repeat: repeat-x; }
+
 
 /* Desain Halaman 6 (Grid Polaroid Mini) */
 .bow-red { top: 2%; left: 50%; transform: translateX(-50%); font-size: 2rem; }

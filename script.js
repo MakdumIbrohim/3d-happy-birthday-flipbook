@@ -61,6 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Buka cover
     btnOpen.addEventListener('click', () => {
         page1.classList.add('hidden');
+        document.getElementById('loadingText').style.opacity = '1';
         
         // Halaman 2 (loading) terbuka otomatis setelah 3 detik
         setTimeout(() => {
@@ -109,6 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Reset jika halaman terakhir diklik
     finalCard.addEventListener('click', () => {
         page1.classList.remove('hidden');
+        document.getElementById('loadingText').style.opacity = '0';
         flipPages.forEach(p => p.classList.remove('flipped'));
         currentIndex = 0;
         
