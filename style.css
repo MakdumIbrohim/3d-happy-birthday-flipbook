@@ -325,11 +325,25 @@ body {
 }
 
 .tilt-l {
-    transform: rotate(-6deg);
+    animation: wiggle-l 0.8s infinite;
 }
 
 .tilt-r {
-    transform: rotate(5deg);
+    animation: wiggle-r 0.9s infinite;
+}
+
+@keyframes wiggle-l {
+    0%, 32.9% { transform: rotate(-6deg); }
+    33%, 65.9% { transform: rotate(4deg) translateY(-1px); }
+    66%, 99.9% { transform: rotate(-2deg) translateY(1px); }
+    100% { transform: rotate(-6deg); }
+}
+
+@keyframes wiggle-r {
+    0%, 32.9% { transform: rotate(5deg); }
+    33%, 65.9% { transform: rotate(-4deg) translateY(1px); }
+    66%, 99.9% { transform: rotate(2deg) translateY(-1px); }
+    100% { transform: rotate(5deg); }
 }
 
 .subtitle {
