@@ -9,11 +9,54 @@
 </head>
 <body>
     <div class="app-container">
+        <!-- Tombol Panah -->
+        <button class="nav-arrow nav-left" id="navLeft">&#10094;</button>
+        <button class="nav-arrow nav-right" id="navRight">&#10095;</button>
+        
         <div class="book">
             
-            <!-- Halaman 8 (Paling bawah - Harapan) -->
+            <!-- Halaman 9 (Paling bawah - Kotak Hadiah & Foto Akhir) -->
+            <div class="page page-9" id="page9">
+                <div class="paper-full" style="position: relative;">
+                    <!-- Kotak Hadiah -->
+                    <div class="gift-wrapper" id="giftBox">
+                        <div class="gift-lid"><div class="gift-ribbon-lid"></div></div>
+                        <div class="gift-body"><div class="gift-ribbon-body"></div></div>
+                    </div>
+                    <p class="paper-text" id="giftText" style="margin-top: 30px;">Ketuk kotaknya</p>
+
+                    <!-- Overlay Foto Akhir (Muncul dari kotak) -->
+                    <div class="final-card" id="finalCard">
+                        <!-- Efek Confetti Cannon CSS -->
+                        <div class="popper conf-1"></div>
+                        <div class="popper conf-2"></div>
+                        <div class="popper conf-3"></div>
+                        <div class="popper conf-4"></div>
+                        <div class="popper conf-5"></div>
+                        <div class="popper conf-6"></div>
+                        <div class="popper conf-7"></div>
+                        <div class="popper conf-8"></div>
+                        
+                        <div class="deco tulip-pink" style="top: 10%; left: 10%;">🌷</div>
+                        <div class="deco star-yellow" style="top: 15%; left: 15%;">⭐</div>
+
+                        <div class="polaroid" style="margin-top: -10px; transform: rotate(1deg);">
+                            <div class="tape tape-polaroid"></div>
+                            <div class="img-placeholder">
+                                <img src="images/foto6.jpg" alt="Foto Akhir" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                                <span class="img-fallback">Taruh foto di<br>images/foto6.jpg</span>
+                            </div>
+                        </div>
+                        
+                        <p class="paper-text message-text-long" style="text-align: center; margin-top: 15px;">Terima kasih sudah menjadi bagian dari cerita indahku. Happy Birthday ❤️</p>
+                        <p class="paper-text" style="font-size: 2.2rem; margin-top: 10px;">Dari, Ibra</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Halaman 8 (Harapan - Bisa dilipat) -->
             <div class="page page-8" id="page8">
-                <div class="paper-full">
+                <div class="paper-full flip-paper">
                     <div class="tape pink-tape"></div>
                     <div class="deco flower-yellow-tr">🌼</div>
                     <div class="deco sparkles-ml">✨</div>
