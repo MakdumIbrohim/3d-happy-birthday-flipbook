@@ -47,6 +47,13 @@ document.addEventListener('DOMContentLoaded', () => {
             flipPages[currentIndex].classList.add('flipped');
             currentIndex++;
             updateUI();
+            
+            // Efek party di halaman 3
+            if (currentIndex === 1) {
+                setTimeout(() => {
+                    document.getElementById('page3').classList.add('party-time');
+                }, 500);
+            }
         }
     }
 
@@ -55,6 +62,11 @@ document.addEventListener('DOMContentLoaded', () => {
             currentIndex--;
             flipPages[currentIndex].classList.remove('flipped');
             updateUI();
+            
+            // Matikan efek agar bisa diputar ulang kalau halaman dibalik lagi
+            if (currentIndex === 0) {
+                document.getElementById('page3').classList.remove('party-time');
+            }
         }
     }
 

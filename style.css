@@ -340,17 +340,47 @@ body {
 }
 
 @keyframes wiggle-l {
-    0%, 32.9% { transform: rotate(-6deg); }
-    33%, 65.9% { transform: rotate(4deg) translateY(-1px); }
-    66%, 99.9% { transform: rotate(-2deg) translateY(1px); }
-    100% { transform: rotate(-6deg); }
+
+    0%,
+    32.9% {
+        transform: rotate(-6deg);
+    }
+
+    33%,
+    65.9% {
+        transform: rotate(4deg) translateY(-1px);
+    }
+
+    66%,
+    99.9% {
+        transform: rotate(-2deg) translateY(1px);
+    }
+
+    100% {
+        transform: rotate(-6deg);
+    }
 }
 
 @keyframes wiggle-r {
-    0%, 32.9% { transform: rotate(5deg); }
-    33%, 65.9% { transform: rotate(-4deg) translateY(1px); }
-    66%, 99.9% { transform: rotate(2deg) translateY(-1px); }
-    100% { transform: rotate(5deg); }
+
+    0%,
+    32.9% {
+        transform: rotate(5deg);
+    }
+
+    33%,
+    65.9% {
+        transform: rotate(-4deg) translateY(1px);
+    }
+
+    66%,
+    99.9% {
+        transform: rotate(2deg) translateY(-1px);
+    }
+
+    100% {
+        transform: rotate(5deg);
+    }
 }
 
 .subtitle {
@@ -1071,9 +1101,20 @@ body {
 }
 
 @keyframes pulse-btn {
-    0% { transform: scale(1); box-shadow: 0 4px 15px rgba(168, 46, 91, 0.4); }
-    50% { transform: scale(1.05); box-shadow: 0 4px 25px rgba(168, 46, 91, 0.7); }
-    100% { transform: scale(1); box-shadow: 0 4px 15px rgba(168, 46, 91, 0.4); }
+    0% {
+        transform: scale(1);
+        box-shadow: 0 4px 15px rgba(168, 46, 91, 0.4);
+    }
+
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 4px 25px rgba(168, 46, 91, 0.7);
+    }
+
+    100% {
+        transform: scale(1);
+        box-shadow: 0 4px 15px rgba(168, 46, 91, 0.4);
+    }
 }
 
 @keyframes bounceDown {
@@ -1081,8 +1122,56 @@ body {
         transform: translateY(-300%);
         opacity: 0;
     }
+
     100% {
         transform: translateY(0);
         opacity: 1;
+    }
+}
+
+/* Cannon Confetti Halaman 3 */
+.cannon {
+    position: absolute;
+    bottom: 20px;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 25;
+}
+
+.cannon-left {
+    left: 20px;
+}
+
+.cannon-right {
+    right: 20px;
+}
+
+.c-particle {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#page3.party-time .cannon {
+    opacity: 1;
+}
+
+#page3.party-time .c-particle {
+    animation: shoot-diag 1.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+@keyframes shoot-diag {
+    0% {
+        transform: translate(0, 0) scale(0) rotate(0deg);
+        opacity: 1;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(var(--tx), var(--ty)) scale(1.5) rotate(var(--rot));
+        opacity: 0;
     }
 }
