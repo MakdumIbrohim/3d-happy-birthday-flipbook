@@ -393,27 +393,79 @@ body {
     z-index: 5;
 }
 
-.btn-open {
-    background-color: #a82e5b;
-    color: white;
-    border: none;
-    padding: 12px 30px;
-    font-size: 1.1rem;
+/* Track Geser Transparan */
+.swipe-open-container {
+    width: 100%; /* Sesuai dengan lebar buku persis */
+    height: 90px;
+    position: absolute;
+    bottom: 25%;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    z-index: 15;
+    transition: opacity 0.5s ease;
+    perspective: 1000px; /* Penting untuk efek lipatan 3D */
+}
+
+/* Label Kertas yang Digeser (Biru keunguan presisi) */
+.swipe-plaster {
+    position: absolute;
+    left: 0; 
+    width: 100%; /* Presisi sesuai lebar sampul, tidak melebihi buku */
+    height: 80px;
+    background-color: #8c9ac2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: grab;
+    touch-action: pan-y;
+    z-index: 16;
+    box-shadow: 2px 4px 15px rgba(0, 0, 0, 0.25);
+    border-radius: 2px;
+    /* Efek kertas sobek atas bawah */
+    border-top: 3px dashed rgba(255, 255, 255, 0.8);
+    border-bottom: 3px dashed rgba(255, 255, 255, 0.8);
+    transition: box-shadow 0.2s;
+}
+
+.swipe-plaster:active {
+    cursor: grabbing;
+    box-shadow: 4px 8px 18px rgba(0, 0, 0, 0.35);
+}
+
+/* Tulisan di Kertas */
+.seal-text {
+    font-family: 'Caveat', cursive;
+    font-size: 2.2rem;
+    color: #ffffff;
     font-weight: bold;
-    border-radius: 25px;
-    cursor: pointer;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    transition: transform 0.2s, background-color 0.2s;
-    z-index: 5;
+    user-select: none;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    letter-spacing: 2px;
+    white-space: nowrap; /* Teks tidak terpotong ke bawah */
 }
 
-.btn-open:hover {
-    background-color: #92254e;
-    transform: scale(1.05);
+/* Dua Selotip Penahan Atas & Bawah (Kuning cerah) */
+.washi-tape {
+    position: absolute;
+    width: 50px;
+    height: 22px;
+    background-color: rgba(253, 224, 71, 0.95);
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 17;
 }
 
-.btn-open:active {
-    transform: scale(0.95);
+.washi-tape.top {
+    top: -12px;
+    left: 20px;
+    transform: rotate(-30deg);
+}
+
+.washi-tape.bottom {
+    bottom: -12px;
+    right: 20px;
+    transform: rotate(-30deg);
 }
 
 /* Desain Halaman 2, 3 */
