@@ -1314,7 +1314,7 @@ body {
 #page7 .paper-full, 
 #page8 .paper-full {
     justify-content: flex-start !important;
-    padding-top: 85px !important; /* Offset agar baseline teks pas mendarat di atas garis */
+    padding-top: 45px !important; /* Offset agar baseline teks pas mendarat di atas garis */
 }
 
 .wishes-container {
@@ -1327,4 +1327,12 @@ body {
     margin-top: 0 !important;
     margin-bottom: 0 !important;
     line-height: 40px !important;
+}
+
+/* KECILKAN SEDIKIT FONT AGAR MUAT */
+.message-text {
+    font-size: 1.35rem !important;
+}
+.message-text-long {
+    font-size: 1.25rem !important;
 }
