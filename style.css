@@ -35,6 +35,8 @@ body {
     opacity: 0;
     pointer-events: none;
     transition: transform 0.8s ease, opacity 1s ease;
+    /* Inisialisasi counter untuk penomoran halaman (Mundur dari 9 karena susunan DOM terbalik) */
+    counter-reset: pageNum 9;
 }
 
 .book.show-book {
@@ -1188,4 +1190,22 @@ body {
         transform: translate(var(--tx), var(--ty)) scale(1.5) rotate(var(--rot));
         opacity: 0;
     }
+}
+
+/* Penomoran Halaman Otomatis (Kecuali Sampul Utama) */
+.page:not(.page-1) {
+    counter-increment: pageNum -1;
+}
+
+.page:not(.page-1) .paper-full::before {
+    content: counter(pageNum);
+    position: absolute;
+    bottom: 12px;
+    right: 18px;
+    font-family: 'Kalam', cursive;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.4);
+    z-index: 10;
+    pointer-events: none;
 }
