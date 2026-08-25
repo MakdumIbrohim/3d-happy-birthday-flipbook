@@ -1297,3 +1297,34 @@ body {
     background-image: linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px);
     background-size: 8px 8px;
 }
+
+/* PENYESUAIAN TEKS DENGAN GARIS KERTAS */
+.paper-text, .wishes-list li {
+    line-height: 40px !important; /* Pas persis dengan jarak garis di .paper-full (40px) */
+    margin-bottom: 0 !important;
+}
+
+.wishes-title {
+    margin-bottom: 0 !important;
+    line-height: 40px !important;
+}
+
+/* Khusus halaman yang isinya hanya teks, kita sejajarkan dari atas agar nempel di garis */
+#page5 .paper-full, 
+#page7 .paper-full, 
+#page8 .paper-full {
+    justify-content: flex-start !important;
+    padding-top: 85px !important; /* Offset agar baseline teks pas mendarat di atas garis */
+}
+
+.wishes-container {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+/* HAPUS MARGIN BAWAAN YANG MENGGESER TEKS DARI GARIS */
+.message-text, .message-text-long {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    line-height: 40px !important;
+}
