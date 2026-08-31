@@ -6,6 +6,7 @@
 
 const CONFIG = {
     // --- PENGATURAN MUSIK & COVER AWAL ---
+    // Sesuaikan musik disini
     music: {
         title: "Shape of My Heart",
         artist: "Backstreet Boys",
@@ -26,13 +27,14 @@ const CONFIG = {
     page3_letters: [
         "HAPPY",
         "BIRTHDAY",
-        "FITRI",
-        "AULIA"
+        "UBAH",
+        "NAMANYA"
     ],
     
     // --- HALAMAN 4: FOTO POLAROID 1 ---
+    // Sesuaikan usia disini
     page4: {
-        caption: "Cie udah umur 21 tahun nih :)"
+        caption: "Cie udah umur (angka) tahun nih :)"
     },
     
     // --- HALAMAN 5: PESAN SINGKAT ---
@@ -41,8 +43,9 @@ const CONFIG = {
     },
     
     // --- HALAMAN 6: TANGGAL KOLASE FOTO ---
+    // Sesuaikan tanggal disini
     page6: {
-        date: "6 Agustus 2026"
+        date: "27 September 2005"
     },
     
     // --- HALAMAN 7: PESAN PANJANG ---
@@ -51,6 +54,7 @@ const CONFIG = {
     },
     
     // --- HALAMAN 8: HARAPAN & DOA ---
+    // Sesuaikan harapan & doa disini
     page8: {
         wishesTitle: "Semoga...",
         wishesList: [
@@ -68,6 +72,6 @@ const CONFIG = {
     page9: {
         hintText: "Ketuk kotaknya",
         finalMessage: "Terima kasih sudah menjadi bagian dari cerita indahku. Happy Birthday Sayangku ❤️",
-        signature: "Dari, Ibra"
+        signature: "Dari, (nama si pemberi kado)"
     }
 };
